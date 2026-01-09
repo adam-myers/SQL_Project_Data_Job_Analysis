@@ -1,1 +1,8 @@
-/.vscode
+# Editor config
+.vscode/
+
+# Data files
+csv_files/
+
+# Practice / course saves
+SQL_Course_Saves/
