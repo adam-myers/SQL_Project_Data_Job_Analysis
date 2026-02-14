@@ -49,9 +49,9 @@ FROM
     job_postings_fact jpf
 LEFT JOIN company_dim cd ON jpf.company_id = cd.company_id
 WHERE
-    job_title_short = 'Data Analyst' AND
-    job_location = 'Anywhere' AND
-    salary_year_avg IS NOT NULL
+    job_title_short = 'Data Analyst' 
+    AND job_location = 'Anywhere' 
+    AND salary_year_avg IS NOT NULL
 ORDER BY
     salary_year_avg DESC
 LIMIT 10;
@@ -79,9 +79,9 @@ WITH top_paying_jobs AS (
         job_postings_fact jpf
     LEFT JOIN company_dim cd ON jpf.company_id = cd.company_id
     WHERE
-        job_title_short = 'Data Analyst' AND
-        job_location = 'Anywhere' AND
-        salary_year_avg IS NOT NULL
+        job_title_short = 'Data Analyst' 
+        AND job_location = 'Anywhere' 
+        AND salary_year_avg IS NOT NULL
     ORDER BY
         salary_year_avg DESC
     LIMIT 10
@@ -118,8 +118,8 @@ FROM
 INNER JOIN skills_job_dim sj ON jpf.job_id = sj.job_id
 INNER JOIN skills_dim sd ON sj.skill_id = sd.skill_id
 WHERE 
-    job_title_short = 'Data Analyst' AND
-    job_work_from_home = TRUE
+    job_title_short = 'Data Analyst' 
+    AND job_work_from_home = TRUE
 GROUP BY 
     skills
 ORDER BY 

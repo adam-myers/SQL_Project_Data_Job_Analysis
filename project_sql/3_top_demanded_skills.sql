@@ -16,8 +16,8 @@ FROM
 INNER JOIN skills_job_dim sj ON jpf.job_id = sj.job_id -- Inner joins ensure only jobs with explicitly listed skills are counted.
 INNER JOIN skills_dim sd ON sj.skill_id = sd.skill_id
 WHERE 
-    job_title_short = 'Data Analyst' AND
-    job_work_from_home = TRUE
+    job_title_short = 'Data Analyst' 
+    AND job_work_from_home = TRUE
 GROUP BY 
     skills
 ORDER BY 
