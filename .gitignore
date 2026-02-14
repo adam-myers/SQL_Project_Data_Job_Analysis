@@ -6,3 +6,9 @@ csv_files/
 
 # Practice / course saves
 SQL_Course_Saves/
+
+# Images / visualizations
+assets/
+
+# Local working documents
+*.docx
